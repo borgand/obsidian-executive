@@ -2,8 +2,8 @@
   "name": "Executive",
   "id": "executive",
   "version": "0.1.0",
-  "minAppVersion": "1.0.0",
+  "minAppVersion": "1.10.6",
   "description": "Warm jade and coral theme ported from the Executive Typora theme, with Monaspace fonts and matching light and dark palettes.",
-  "author": "TODO-author",
-  "authorUrl": "https://example.com/TODO"
+  "author": "borgand",
+  "authorUrl": "https://github.com/borgand"
 }

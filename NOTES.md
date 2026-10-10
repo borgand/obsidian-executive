@@ -231,9 +231,6 @@ Dark report at time of writing (below 4.5:1 vs `--exec-bg`, upstream values, not
 
 ## Open questions
 
-- `manifest.json` `minAppVersion` is the placeholder `1.0.0`, pending verification against the Obsidian docs.
-- `src/02-callouts.css` uses native CSS nesting (`.theme-dark { .callout[data-callout="x"] { ... } }`). Chromium supports this from 112, so it needs an Obsidian build on Electron 24 or later. If `minAppVersion` ends up older, switch to flat `.theme-dark .callout[...]` selectors.
-- `author` and `authorUrl` in `manifest.json` are placeholders.
 
 ## Post-build open questions and judgement calls
 
@@ -248,8 +245,8 @@ Dark report at time of writing (below 4.5:1 vs `--exec-bg`, upstream values, not
 - Callouts: the `color-mix(in srgb, rgb(var(--callout-color)) 10%, transparent)` tint was dropped, because `check.mjs` forbids `rgb(` in hand-written files. It needs Chromium 111+. The callout background tint is therefore not set yet.
 - Callout `-rgb` and `-hsl` colour variables are deprecated since Obsidian 1.13, and the docs recommend `color-mix(in oklch, ...)`. The callout triplets are still the `--callout-color` RGB form.
 - Mermaid: only flowchart, sequence, state and class diagrams are styled. Per-diagram theme variables and other diagram types cannot be matched from CSS.
-- `manifest.json` `minAppVersion` is `1.0.0`. The official sample theme uses `1.10.6`. The docs recommend no value. Decide before release.
-- `manifest.json` `author` and `authorUrl` are placeholders.
+- `manifest.json` `minAppVersion` is `1.10.6`, matching the official sample theme. The docs recommend no value.
+- `manifest.json` `author` is `borgand` and `authorUrl` is `https://github.com/borgand`.
 - `test-vault/.obsidian/themes/Executive` links back to the repo root. Harmless for Obsidian, but folder-walking tools may loop.
 - `test-vault/assets/sample-chart.svg` contains hex colours. `check.mjs` scans only `src/`, so this is an accepted exception to "palette.json is the only colour source".
 - Dark-mode contrast below 4.5:1 (report only): tan 4.27, comment 3.63, muted 3.56, purple 4.33, red 3.13, jade 2.86 against `--exec-bg`.
