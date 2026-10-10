@@ -1,0 +1,40 @@
+body {
+  --titlebar-background: var(--exec-bg-panel);
+  --titlebar-background-focused: var(--exec-bg-panel);
+  --titlebar-border-color: var(--exec-brown-soft);
+  --titlebar-text-color: var(--exec-muted);
+  --titlebar-text-color-focused: var(--exec-text-title);
+
+  --ribbon-background: var(--exec-bg-sidebar);
+  --ribbon-background-collapsed: var(--exec-bg);
+
+  --divider-color: var(--exec-brown-soft);
+  --divider-color-hover: var(--exec-jade-bright);
+
+  --tab-container-background: var(--exec-bg-panel);
+  --tab-background-active: var(--exec-bg);
+  --tab-divider-color: var(--exec-brown-soft);
+  --tab-outline-color: var(--exec-brown-soft);
+  --tab-text-color: var(--exec-muted);
+  --tab-text-color-active: var(--exec-text-sidebar);
+  --tab-text-color-focused: var(--exec-text-soft);
+  --tab-text-color-focused-active: var(--exec-text-strong);
+  --tab-text-color-focused-highlighted: var(--exec-text-strong);
+  --tab-text-color-focused-active-current: var(--exec-text-strong);
+
+  --status-bar-background: var(--exec-jade-deep);
+  --status-bar-border-color: var(--exec-jade-deep);
+  --status-bar-text-color: var(--exec-cream);
+
+  --modal-background: var(--exec-bg-menu);
+  --modal-border-color: var(--exec-brown-line);
+  --prompt-border-color: var(--exec-brown-line);
+
+  --scrollbar-thumb-bg: var(--exec-scrollbar);
+  --scrollbar-active-thumb-bg: var(--exec-brown-mid);
+}
+
+body .menu {
+  background-color: var(--exec-bg-menu);
+  border-color: var(--exec-brown-line);
+}

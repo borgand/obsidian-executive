@@ -1,0 +1,91 @@
+body {
+  --background-primary: var(--exec-bg);
+  --background-primary-alt: var(--exec-bg-raised);
+  --background-secondary: var(--exec-bg-sidebar);
+  --background-secondary-alt: var(--exec-bg-panel);
+  --background-modifier-border: var(--exec-brown-line);
+  --background-modifier-border-hover: var(--exec-brown-mid);
+  --background-modifier-border-focus: var(--exec-jade-bright);
+  --background-modifier-form-field: var(--exec-bg-input);
+  --background-modifier-hover: var(--exec-bg-hover);
+  --background-modifier-active-hover: var(--exec-bg-active);
+  --background-modifier-error: var(--exec-red);
+  --background-modifier-error-hover: var(--exec-red);
+  --background-modifier-success: var(--exec-green);
+  --background-modifier-message: var(--exec-bg-menu);
+
+  --text-normal: var(--exec-text);
+  --text-muted: var(--exec-text-soft);
+  --text-faint: var(--exec-muted);
+  --text-accent: var(--exec-jade-light);
+  --text-accent-hover: var(--exec-jade-bright);
+  --text-on-accent: var(--exec-cream);
+  --text-on-accent-inverted: var(--exec-cream);
+  --text-error: var(--exec-red);
+  --text-success: var(--exec-green);
+  --text-warning: var(--exec-warning);
+  --text-selection: var(--exec-selection);
+  --text-highlight-bg: var(--exec-mark-bg);
+  --caret-color: var(--exec-cursor);
+
+  --interactive-normal: var(--exec-bg-panel);
+  --interactive-hover: var(--exec-bg-hover);
+  --interactive-accent: var(--exec-btn);
+  --interactive-accent-hover: var(--exec-btn-hover);
+
+  --h1-color: var(--exec-heading);
+  --h2-color: var(--exec-heading);
+  --h3-color: var(--exec-gold);
+  --h4-color: var(--exec-gold);
+  --h5-color: var(--exec-text-strong);
+  --h6-color: var(--exec-tan-light);
+  --heading-formatting: var(--exec-muted);
+
+  --link-color: var(--exec-blue);
+  --link-color-hover: var(--exec-teal-bright);
+  --link-external-color: var(--exec-blue);
+  --link-external-color-hover: var(--exec-teal-bright);
+  --link-unresolved-color: var(--exec-blue);
+  --link-unresolved-decoration-color: var(--exec-brown-mid);
+
+  --blockquote-color: var(--exec-tan-light);
+  --blockquote-border-color: var(--exec-brown);
+  --blockquote-font-style: italic;
+
+  --table-header-background: var(--exec-bg-th);
+  --table-header-color: var(--exec-text-strong);
+  --table-border-color: var(--exec-brown-line);
+  --table-header-border-color: var(--exec-brown-line);
+  --table-row-alt-background: var(--exec-zebra);
+  --table-selection: var(--exec-selection-code);
+  --table-selection-border-color: var(--exec-jade-bright);
+
+  --hr-color: var(--exec-brown);
+
+  --tag-color: var(--exec-teal);
+  --tag-color-hover: var(--exec-teal-bright);
+  --tag-background: var(--exec-bg-hover);
+  --tag-background-hover: var(--exec-bg-active);
+  --tag-border-color: var(--exec-bg-hover);
+  --tag-border-color-hover: var(--exec-bg-active);
+
+  --checkbox-color: var(--exec-jade);
+  --checkbox-color-hover: var(--exec-jade-bright);
+  --checkbox-border-color: var(--exec-brown-mid);
+  --checkbox-border-color-hover: var(--exec-tan);
+  --checkbox-marker-color: var(--exec-cream);
+  --checklist-done-color: var(--exec-muted);
+
+  --code-background: var(--exec-bg-raised);
+  --code-normal: var(--exec-text);
+  --code-keyword: var(--exec-purple);
+  --code-string: var(--exec-green);
+  --code-comment: var(--exec-comment);
+  --code-function: var(--exec-blue);
+  --code-value: var(--exec-orange);
+  --code-property: var(--exec-coral);
+  --code-tag: var(--exec-coral);
+  --code-operator: var(--exec-sand);
+  --code-punctuation: var(--exec-sand);
+  --code-important: var(--exec-teal);
+}
