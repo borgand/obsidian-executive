@@ -94,9 +94,9 @@ function calloutsCss(tokens) {
     const rules = Object.entries(CALLOUT_TOKENS).map(([type, token]) => {
       if (!tokens[token]) throw new Error(`Callout ${type} uses undefined token ${token}`);
       const { r, g, b } = parseColor(tokens[token][mode]);
-      return `  .callout[data-callout="${type}"] {\n    --callout-color: ${r}, ${g}, ${b};\n  }`;
+      return `.theme-${mode} .callout[data-callout="${type}"] {\n  --callout-color: ${r}, ${g}, ${b};\n}`;
     });
-    return `.theme-${mode} {\n${rules.join("\n")}\n}\n`;
+    return `${rules.join("\n")}\n`;
   }).join("\n");
 }
 
