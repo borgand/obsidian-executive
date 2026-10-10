@@ -234,3 +234,24 @@ Dark report at time of writing (below 4.5:1 vs `--exec-bg`, upstream values, not
 - `manifest.json` `minAppVersion` is the placeholder `1.0.0`, pending verification against the Obsidian docs.
 - `src/02-callouts.css` uses native CSS nesting (`.theme-dark { .callout[data-callout="x"] { ... } }`). Chromium supports this from 112, so it needs an Obsidian build on Electron 24 or later. If `minAppVersion` ends up older, switch to flat `.theme-dark .callout[...]` selectors.
 - `author` and `authorUrl` in `manifest.json` are placeholders.
+
+## Post-build open questions and judgement calls
+
+- `.markdown-rendered` (Reading view) and `.cm-editor` (editor) are not in the developer docs. Only forum posts describe them. Everything in `20-content.css` depends on them. Verify before release.
+- `.menu`, `.callout-title`, `.callout-content`, `.mermaid`, the `.cm-*` Markdown classes and the Prism `.token.*` classes are undocumented. Each is used only where no documented variable exists.
+- `--text-selection` sets the selection background only. `::selection` in `20-content.css` sets the selected-text colour to `--exec-selection-text`.
+- Highlight text colour (`--exec-mark-text`) has no documented variable. Only `--text-highlight-bg` is documented, so the text colour is set by a selector.
+- Code-token roles `type`, `builtin`, `number`, `atom` and `meta` have no Obsidian variables of their own. `--code-value` is orange, `--code-important` (regex) is teal and `--code-tag` is coral. The remaining roles use selectors in `20-content.css`.
+- Modal backdrop (`--exec-overlay`) and menu/modal shadow (`--exec-shadow`) are not mapped to a variable. `--background-modifier-cover` is not verified, and `.modal-bg` is undocumented.
+- `--scrollbar-bg` is left at the default. No token fits both modes.
+- Notices use `--background-modifier-message`. Whether Obsidian uses it there is unverified.
+- Callouts: the `color-mix(in srgb, rgb(var(--callout-color)) 10%, transparent)` tint was dropped, because `check.mjs` forbids `rgb(` in hand-written files. It needs Chromium 111+. The callout background tint is therefore not set yet.
+- Callout `-rgb` and `-hsl` colour variables are deprecated since Obsidian 1.13, and the docs recommend `color-mix(in oklch, ...)`. The callout triplets are still the `--callout-color` RGB form.
+- Mermaid: only flowchart, sequence, state and class diagrams are styled. Per-diagram theme variables and other diagram types cannot be matched from CSS.
+- `manifest.json` `minAppVersion` is `1.0.0`. The official sample theme uses `1.10.6`. The docs recommend no value. Decide before release.
+- `manifest.json` `author` and `authorUrl` are placeholders.
+- `test-vault/.obsidian/themes/Executive` links back to the repo root. Harmless for Obsidian, but folder-walking tools may loop.
+- `test-vault/assets/sample-chart.svg` contains hex colours. `check.mjs` scans only `src/`, so this is an accepted exception to "palette.json is the only colour source".
+- Dark-mode contrast below 4.5:1 (report only): tan 4.27, comment 3.63, muted 3.56, purple 4.33, red 3.13, jade 2.86 against `--exec-bg`.
+- Light contrast: `--exec-heading` is the lowest at 4.56:1 against `--exec-bg`. It passes.
+- `--exec-shadow` uses 0.45 for menus. Upstream modals use 0.6, and no token covers 0.6.
