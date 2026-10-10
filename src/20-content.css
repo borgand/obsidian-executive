@@ -1,0 +1,400 @@
+body {
+  --h1-size: 2.25rem;
+  --h2-size: 1.625rem;
+  --h3-size: 1.3rem;
+  --h4-size: 1.1rem;
+  --h5-size: 1rem;
+  --h6-size: 0.95rem;
+  --h1-weight: 700;
+  --h2-weight: 650;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --h5-weight: 650;
+  --h6-weight: 600;
+}
+
+.markdown-rendered,
+.cm-editor {
+  font-family: "Executive Xenon", "Segoe UI Emoji", "Apple Color Emoji", monospace;
+  font-feature-settings: "calt" 1, "liga" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "ss05" 1, "ss06" 1, "ss07" 1, "ss08" 1, "ss09" 1;
+  font-weight: 400;
+  font-stretch: 100%;
+}
+
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6,
+.cm-editor .cm-header {
+  font-family: "Executive Xenon", "Segoe UI Emoji", "Apple Color Emoji", monospace;
+  line-height: 1.25;
+}
+
+.markdown-rendered h1,
+.cm-editor .cm-header-1 {
+  font-weight: 700;
+  font-stretch: 112%;
+  letter-spacing: -0.02em;
+}
+
+.markdown-rendered h2,
+.cm-editor .cm-header-2 {
+  font-weight: 650;
+  font-stretch: 108%;
+  letter-spacing: -0.015em;
+}
+
+.markdown-rendered h3,
+.markdown-rendered h4,
+.cm-editor .cm-header-3,
+.cm-editor .cm-header-4,
+.markdown-rendered h6,
+.cm-editor .cm-header-6 {
+  font-weight: 600;
+}
+
+.markdown-rendered h5,
+.cm-editor .cm-header-5 {
+  font-weight: 650;
+}
+
+.markdown-rendered h6,
+.cm-editor .cm-header-6 {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.markdown-rendered h1,
+.cm-editor .HyperMD-header-1 {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--exec-brown);
+}
+
+.markdown-rendered h2,
+.cm-editor .HyperMD-header-2 {
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--exec-brown-soft);
+}
+
+.markdown-rendered strong,
+.markdown-rendered b,
+.cm-editor .cm-strong {
+  font-weight: 700;
+  color: var(--exec-orange);
+}
+
+.markdown-rendered em,
+.markdown-rendered i,
+.cm-editor .cm-em {
+  font-style: italic;
+  color: var(--exec-purple);
+}
+
+.markdown-rendered strong em,
+.markdown-rendered em strong,
+.markdown-rendered b i,
+.markdown-rendered i b,
+.cm-editor .cm-strong.cm-em {
+  color: var(--exec-gold);
+}
+
+.markdown-rendered mark,
+.cm-editor .cm-highlight {
+  background: var(--exec-mark-bg);
+  color: var(--exec-mark-text);
+  border-radius: 2px;
+}
+
+.markdown-rendered mark {
+  padding: 0 0.2em;
+}
+
+.markdown-rendered del,
+.markdown-rendered s,
+.cm-editor .cm-strikethrough {
+  color: var(--exec-muted);
+  text-decoration-color: var(--exec-coral);
+}
+
+.markdown-rendered :not(pre) > code,
+.cm-editor .cm-inline-code {
+  font-family: "Executive Neon", "Segoe UI Emoji", "Apple Color Emoji", monospace;
+  font-size: 0.875em;
+  font-weight: 450;
+  color: var(--exec-green);
+  background: var(--exec-bg-raised);
+  border: 1px solid var(--exec-border-code);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.markdown-rendered a:not(.tag),
+.cm-editor .cm-hmd-internal-link,
+.cm-editor .cm-link,
+.cm-editor .cm-url {
+  color: var(--exec-blue);
+  text-decoration-color: var(--exec-blue);
+  transition: color 0.15s ease-in-out;
+}
+
+.markdown-rendered a:not(.tag):hover,
+.cm-editor .cm-hmd-internal-link:hover,
+.cm-editor .cm-link:hover,
+.cm-editor .cm-url:hover {
+  color: var(--exec-teal-bright);
+  text-decoration-color: var(--exec-purple);
+}
+
+.markdown-rendered table,
+.cm-editor .cm-table-widget table {
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+
+.markdown-rendered th,
+.markdown-rendered td,
+.cm-editor .cm-table-widget th,
+.cm-editor .cm-table-widget td {
+  border: 1px solid var(--exec-brown-line);
+  padding: 7px 12px;
+}
+
+.markdown-rendered th,
+.cm-editor .cm-table-widget th {
+  background: var(--exec-bg-th);
+  color: var(--exec-text-strong);
+  font-weight: 650;
+  text-align: left;
+}
+
+.markdown-rendered tbody tr:nth-child(2n),
+.cm-editor .cm-table-widget tbody tr:nth-child(2n) {
+  background: var(--exec-zebra);
+}
+
+.markdown-rendered pre,
+.markdown-rendered pre code,
+.cm-editor .HyperMD-codeblock {
+  font-family: "Executive Neon", "Segoe UI Emoji", "Apple Color Emoji", monospace;
+  font-weight: 400;
+}
+
+.markdown-rendered pre {
+  background: var(--exec-bg-raised);
+  border: 1px solid var(--exec-border-code);
+  border-radius: 4px;
+}
+
+.markdown-rendered pre code {
+  color: var(--exec-text);
+}
+
+.markdown-rendered .token.keyword,
+.cm-editor .HyperMD-codeblock .cm-keyword {
+  color: var(--exec-purple);
+}
+
+.markdown-rendered .token.number,
+.markdown-rendered .token.boolean,
+.markdown-rendered .token.constant,
+.markdown-rendered .token.symbol,
+.markdown-rendered .token.attr-name,
+.markdown-rendered .token.atrule,
+.cm-editor .HyperMD-codeblock .cm-number,
+.cm-editor .HyperMD-codeblock .cm-atom,
+.cm-editor .HyperMD-codeblock .cm-meta,
+.cm-editor .HyperMD-codeblock .cm-qualifier,
+.cm-editor .HyperMD-codeblock .cm-attribute {
+  color: var(--exec-orange);
+}
+
+.markdown-rendered .token.function,
+.cm-editor .HyperMD-codeblock .cm-def {
+  color: var(--exec-blue);
+}
+
+.markdown-rendered .token.variable,
+.markdown-rendered .token.property,
+.markdown-rendered .token.tag,
+.cm-editor .HyperMD-codeblock .cm-variable,
+.cm-editor .HyperMD-codeblock .cm-property,
+.cm-editor .HyperMD-codeblock .cm-tag {
+  color: var(--exec-coral);
+}
+
+.cm-editor .HyperMD-codeblock .cm-variable-2 {
+  color: var(--exec-gold);
+}
+
+.markdown-rendered .token.class-name,
+.markdown-rendered .token.builtin,
+.markdown-rendered .token.regex,
+.cm-editor .HyperMD-codeblock .cm-type,
+.cm-editor .HyperMD-codeblock .cm-variable-3,
+.cm-editor .HyperMD-codeblock .cm-builtin,
+.cm-editor .HyperMD-codeblock .cm-string-2 {
+  color: var(--exec-teal);
+}
+
+.markdown-rendered .token.operator,
+.markdown-rendered .token.punctuation,
+.cm-editor .HyperMD-codeblock .cm-operator,
+.cm-editor .HyperMD-codeblock .cm-punctuation,
+.cm-editor .HyperMD-codeblock .cm-bracket {
+  color: var(--exec-sand);
+}
+
+.markdown-rendered .token.comment,
+.markdown-rendered .token.prolog,
+.markdown-rendered .token.doctype,
+.markdown-rendered .token.cdata,
+.cm-editor .HyperMD-codeblock .cm-comment {
+  color: var(--exec-comment);
+  font-style: italic;
+}
+
+.markdown-rendered .token.string,
+.markdown-rendered .token.char,
+.markdown-rendered .token.attr-value,
+.cm-editor .HyperMD-codeblock .cm-string {
+  color: var(--exec-green);
+}
+
+.callout {
+  --callout-border-width: 0 0 0 3px;
+  --callout-border-opacity: 1;
+  --callout-radius: 0 4px 4px 0;
+  --callout-title-weight: 650;
+}
+
+.callout-title {
+  font-family: "Executive Xenon", "Segoe UI Emoji", "Apple Color Emoji", monospace;
+  font-weight: 650;
+}
+
+.callout-content {
+  font-weight: 400;
+}
+
+.mermaid,
+.mermaid svg {
+  font-feature-settings: "calt" 1, "liga" 1;
+}
+
+.mermaid svg text,
+.mermaid svg tspan,
+.mermaid svg foreignObject div,
+.mermaid svg foreignObject span,
+.mermaid svg foreignObject p,
+svg[aria-roledescription] text,
+svg[aria-roledescription] tspan,
+svg[aria-roledescription] foreignObject * {
+  font-family: "Executive Argon", "Executive Neon", sans-serif !important;
+  font-weight: 400 !important;
+  font-stretch: 100%;
+}
+
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon,
+.mermaid .node path,
+.mermaid .actor,
+.mermaid .statediagram-state rect,
+.mermaid g.classGroup rect,
+.mermaid .labelBox {
+  fill: var(--exec-node-fill) !important;
+  stroke: var(--exec-brown-mid) !important;
+}
+
+.mermaid .nodeLabel,
+.mermaid .label,
+.mermaid .stateLabel,
+.mermaid g.classGroup text,
+.mermaid text.actor > tspan,
+.mermaid .labelText,
+.mermaid .loopText,
+.mermaid .loopText > tspan,
+.mermaid .messageText,
+.mermaid .sequenceNumber {
+  fill: var(--exec-text-strong) !important;
+  color: var(--exec-text-strong) !important;
+}
+
+.mermaid .cluster-label,
+.mermaid .cluster-label .nodeLabel,
+.mermaid .titleText,
+.mermaid .classTitle {
+  fill: var(--exec-gold) !important;
+  color: var(--exec-gold) !important;
+}
+
+.mermaid .edgePath .path,
+.mermaid .flowchart-link,
+.mermaid .transition,
+.mermaid .relation,
+.mermaid .messageLine0,
+.mermaid .messageLine1,
+.mermaid .loopLine {
+  stroke: var(--exec-tan) !important;
+}
+
+.mermaid .actor-line {
+  stroke: var(--exec-brown) !important;
+}
+
+.mermaid marker path,
+.mermaid .arrowheadPath,
+.mermaid .marker {
+  fill: var(--exec-tan) !important;
+  stroke: var(--exec-tan) !important;
+}
+
+.mermaid .edgeLabel rect,
+.mermaid .labelBkg {
+  fill: var(--exec-bg) !important;
+  background-color: var(--exec-bg) !important;
+}
+
+.mermaid .edgeLabel,
+.mermaid .edgeLabel p,
+.mermaid .edgeLabel span {
+  fill: var(--exec-text-strong) !important;
+  color: var(--exec-text-strong) !important;
+  background-color: var(--exec-bg) !important;
+}
+
+.mermaid .cluster rect,
+.mermaid .cluster polygon {
+  fill: var(--exec-bg-raised) !important;
+  stroke: var(--exec-brown) !important;
+}
+
+.mermaid .note,
+.mermaid .note rect {
+  fill: var(--exec-brown) !important;
+  stroke: var(--exec-brown-mid) !important;
+}
+
+.mermaid .noteText,
+.mermaid .noteText > tspan {
+  fill: var(--exec-cream) !important;
+  color: var(--exec-cream) !important;
+}
+
+.mermaid .activation0,
+.mermaid .activation1,
+.mermaid .activation2 {
+  fill: var(--exec-jade) !important;
+  stroke: var(--exec-jade-light) !important;
+}
+
+.mermaid .start-state,
+.mermaid .end-state,
+.mermaid .statediagram-state .divider,
+.mermaid g.stateGroup .state-start {
+  fill: var(--exec-jade) !important;
+  stroke: var(--exec-jade) !important;
+}
